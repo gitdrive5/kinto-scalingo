@@ -4,8 +4,8 @@
   "addons": [
     "scalingo-postgresql"
   ],
-  "website": "https://github.com/kinto/kinto-scalingo",
-  "repository": "https://github.com/kinto/kinto-scalingo",
+  "website": "https://github.com/Scalingo/kinto-scalingo",
+  "repository": "https://github.com/Scalingo/kinto-scalingo",
   "logo": "https://avatars0.githubusercontent.com/u/13413813",
   "env": {}
 }
