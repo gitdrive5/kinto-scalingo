@@ -6,7 +6,7 @@ Following the installation you should have a Kinto server available for you to u
 ## Installation for Scalingo
 
 ```
-$ git clone http://github.com/Kinto/kinto-heroku.git --depth=1 kinto-instance && cd kinto-instance
+$ git clone http://github.com/Scalingo/kinto-scalingo.git --depth=1 kinto-instance && cd kinto-instance
 $ scalingo create my-kinto && git push scalingo master
 ```
 
