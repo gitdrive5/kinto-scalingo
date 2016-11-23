@@ -33,6 +33,7 @@ If you did not create the app on the Scalingo dashboard yet:
 
 ```
 $ scalingo create my-kinto
+$ scalingo --app my-kinto addons-add scalingo-postgresql free
 ```
 
 otherwise, if the app is already created:

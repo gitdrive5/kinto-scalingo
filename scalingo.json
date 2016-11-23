@@ -7,5 +7,10 @@
   "website": "https://github.com/Scalingo/kinto-scalingo",
   "repository": "https://github.com/Scalingo/kinto-scalingo",
   "logo": "https://avatars0.githubusercontent.com/u/13413813",
-  "env": {}
+  "env": {
+    "KINTO_USERID_HMAC_SECRET": {
+      "description": "The secret used to create the user ID from a username:password pair",
+      "generator": "secret"
+    }
+  }
 }
