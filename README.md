@@ -55,7 +55,7 @@ Deploy your modification:
 ```
 $ git push scalingo master
 
- <-- Start deployment of kinto-test -->
+ <-- Start deployment of my-kinto -->
 -------> Buildpack version 1.3.3
 Use locally cached dependencies where possible
 -----> Installing runtime (python-2.7.10)
