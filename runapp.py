@@ -16,4 +16,4 @@ if __name__ == "__main__":
 
     app = loadapp('config:kinto.ini', relative_to='.')
 
-    serve(app, listen='*:'+str(port))
+    serve(app, host='0.0.0.0', port=port)
