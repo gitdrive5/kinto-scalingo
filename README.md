@@ -67,7 +67,14 @@ Use locally cached dependencies where possible
 [...]
 
 -----> Running post-compile hook
-
+INFO   Running kinto 5.0.0. 
+INFO   Created PostgreSQL cache tables 
+INFO   Create PostgreSQL storage schema at version 14 from /app/.scalingo/python/lib/python2.7/site-packages/kinto/core/storage/postgresql/schema.sql 
+INFO   Created PostgreSQL storage schema (version 14). 
+INFO   Created PostgreSQL permission tables 
+----- Procfile declares types -> web
+ Build complete, shipping your container...
+ Waiting for your application to boot... 
 ```
 
 Done!
