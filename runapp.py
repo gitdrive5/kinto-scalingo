@@ -17,6 +17,6 @@ if __name__ == "__main__":
 
     app = loadapp('config:kinto.ini', relative_to='.')
 
-    print "[", app_name, "] application starting on https://", host, ":", port
+    print "["+app_name+"] application starting on https://"+host+":"+port
 
     serve(app, host=host, port=port)
