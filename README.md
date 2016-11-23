@@ -67,6 +67,10 @@ Use locally cached dependencies where possible
 [...]
 
 -----> Running post-compile hook
+/app/.scalingo/python/lib/python2.7/site-packages/kinto/core/storage/postgresql/client.py:88: UserWarning: Reuse existing PostgreSQL connection. Parameters permission_* will be ignored.
+  warnings.warn(msg)
+/app/.scalingo/python/lib/python2.7/site-packages/kinto/core/storage/postgresql/client.py:88: UserWarning: Reuse existing PostgreSQL connection. Parameters cache_* will be ignored.
+  warnings.warn(msg)
 INFO   Running kinto 5.0.0. 
 INFO   Created PostgreSQL cache tables 
 INFO   Create PostgreSQL storage schema at version 14 from /app/.scalingo/python/lib/python2.7/site-packages/kinto/core/storage/postgresql/schema.sql 
@@ -75,6 +79,7 @@ INFO   Created PostgreSQL permission tables
 ----- Procfile declares types -> web
  Build complete, shipping your container...
  Waiting for your application to boot... 
+ <-- https://my-kinto.scalingo.io -->
 ```
 
 Done!
