@@ -5,9 +5,68 @@ Following the installation you should have a Kinto server available for you to u
 
 ## Installation for Scalingo
 
-```
-$ git clone http://github.com/Scalingo/kinto-scalingo.git --depth=1 kinto-instance && cd kinto-instance
-$ scalingo create my-kinto && git push scalingo master
-```
+To deploy Kinto on Scalingo, just click on this button:
 
 [![Deploy to Scalingo](https://cdn.scalingo.com/deploy/button.svg)](https://my.scalingo.com/deploy)
+
+or using CLI:
+
+```
+$ git clone http://github.com/Scalingo/kinto-scalingo.git --depth=1 my-kinto && cd my-kinto
+$ scalingo create my-kinto
+$ scalingo --app my-kinto addons-add scalingo-postgresql free
+$ git push scalingo master
+```
+
+## How to upgrade / change configuration?
+
+First of all use the [Scalingo command](http://cli.scalingo.com/) to login:
+
+Clone this repository and link it to your Scalingo app (here named `my-kinto`):
+
+```
+$ git clone http://github.com/Scalingo/kinto-scalingo.git --depth=1 my-kinto
+$ cd my-kinto
+```
+
+If you did not create the app on the Scalingo dashboard yet:
+
+```
+$ scalingo create my-kinto
+```
+
+otherwise, if the app is already created:
+
+```
+$ git remote add scalingo git@scalingo.com:my-kinto.git
+```
+
+(*optional*) Edit your configuration:
+
+```
+$ <Edit kinto.ini with your new settings>
+$ git commit -am "New setting"
+```
+
+> Note: You can also edit the `requirements.txt` to add new dependencies / plugins.
+
+Deploy your modification:
+
+```
+$ git push scalingo master
+
+ <-- Start deployment of kinto-test -->
+-------> Buildpack version 1.3.3
+Use locally cached dependencies where possible
+-----> Installing runtime (python-2.7.10)
+-----> Installing dependencies with pip
+       Collecting cliquet==2.15.0 (from -r requirements.txt (line 1))
+         Downloading cliquet-2.15.0-cp2.cp3-none-any.whl (315kB)
+
+[...]
+
+-----> Running post-compile hook
+
+```
+
+Done!
