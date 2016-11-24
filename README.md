@@ -12,7 +12,7 @@ To deploy Kinto on Scalingo, just click on this button:
 or using CLI:
 
 ```
-$ git clone http://github.com/Scalingo/kinto-scalingo.git --depth=1 my-kinto && cd my-kinto
+$ git clone http://github.com/Kinto/kinto-scalingo.git --depth=1 my-kinto && cd my-kinto
 $ scalingo create my-kinto
 $ scalingo --app my-kinto addons-add scalingo-postgresql free
 $ git push scalingo master
@@ -25,7 +25,7 @@ First of all use the [Scalingo command](http://cli.scalingo.com/) to login:
 Clone this repository and link it to your Scalingo app (here named `my-kinto`):
 
 ```
-$ git clone http://github.com/Scalingo/kinto-scalingo.git --depth=1 my-kinto
+$ git clone http://github.com/Kinto/kinto-scalingo.git --depth=1 my-kinto
 $ cd my-kinto
 ```
 
