@@ -57,28 +57,30 @@ Deploy your modification:
 $ git push scalingo master
 
  <-- Start deployment of my-kinto -->
--------> Buildpack version 1.3.3
-Use locally cached dependencies where possible
------> Installing runtime (python-2.7.10)
------> Installing dependencies with pip
-       Collecting cliquet==2.15.0 (from -r requirements.txt (line 1))
-         Downloading cliquet-2.15.0-cp2.cp3-none-any.whl (315kB)
+-----> Installing python-3.5.2
+     $ pip install -r requirements.txt
+       Collecting kinto>=6.0.0 (from -r /build/7a05a928-1044-48aa-86bc-e85236101692/requirements.txt (line 1))
+         Downloading kinto-6.0.0-cp2.cp3-none-any.whl (2.2MB)
+       Collecting SQLAlchemy (from -r /build/7a05a928-1044-48aa-86bc-e85236101692/requirements.txt (line 2))
+         Downloading SQLAlchemy-1.1.6.tar.gz (5.2MB)
+       Collecting psycopg2 (from -r /build/7a05a928-1044-48aa-86bc-e85236101692/requirements.txt (line 3))
+         Downloading psycopg2-2.7-cp35-cp35m-manylinux1_x86_64.whl (2.1MB)
+       Collecting zope.sqlalchemy (from -r /build/7a05a928-1044-48aa-86bc-e85236101692/requirements.txt (line 4))
+         Downloading zope.sqlalchemy-0.7.7.tar.gz
 
 [...]
 
 -----> Running post-compile hook
-/app/.scalingo/python/lib/python2.7/site-packages/kinto/core/storage/postgresql/client.py:88: UserWarning: Reuse existing PostgreSQL connection. Parameters permission_* will be ignored.
+/app/.scalingo/python/lib/python3.5/site-packages/kinto/core/storage/postgresql/client.py:87: UserWarning: Reuse existing PostgreSQL connection. Parameters permission_* will be ignored.
   warnings.warn(msg)
-/app/.scalingo/python/lib/python2.7/site-packages/kinto/core/storage/postgresql/client.py:88: UserWarning: Reuse existing PostgreSQL connection. Parameters cache_* will be ignored.
-  warnings.warn(msg)
-INFO   Running kinto 5.0.0. 
-INFO   Created PostgreSQL cache tables 
-INFO   Create PostgreSQL storage schema at version 14 from /app/.scalingo/python/lib/python2.7/site-packages/kinto/core/storage/postgresql/schema.sql 
-INFO   Created PostgreSQL storage schema (version 14). 
-INFO   Created PostgreSQL permission tables 
------ Procfile declares types -> web
+INFO   Running kinto 6.0.0.
+INFO   Created PostgreSQL cache tables
+INFO   Create PostgreSQL storage schema at version 15 from /app/.scalingo/python/lib/python3.5/site-packages/kinto/core/storage/postgresql/schema.sql
+INFO   Created PostgreSQL storage schema (version 15).
+INFO   Created PostgreSQL permission tables
+-----> Procfile declares types -> web
  Build complete, shipping your container...
- Waiting for your application to boot... 
+ Waiting for your application to boot...
  <-- https://my-kinto.scalingo.io -->
 ```
 
