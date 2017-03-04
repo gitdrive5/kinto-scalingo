@@ -1,4 +1,2 @@
-kinto>=4.1.1
-SQLAlchemy
-psycopg2>2.5
-zope.sqlalchemy
+kinto>=6.0.0
+kinto[postgresql]
